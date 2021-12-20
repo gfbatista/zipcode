@@ -6,3 +6,8 @@ spring:
     password: a
   jackson:
     default-property-inclusion: non_null
+
+management:
+  endpoint:
+    health:
+      show-details: always
