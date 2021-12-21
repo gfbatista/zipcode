@@ -19,4 +19,8 @@ class ZipCodeService(
         return zipCodeRepository.findByCode(code) ?: throw NotFoundException(Errors.ERROR001.message.format(code), Errors.ERROR001.code)
     }
 
+    fun create(zipcode: ZipCodeModel) {
+        zipCodeRepository.save(zipcode)
+    }
+
 }

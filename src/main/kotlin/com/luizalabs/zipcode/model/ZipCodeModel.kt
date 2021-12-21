@@ -7,7 +7,7 @@ import javax.persistence.*
 data class ZipCodeModel(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Int,
+    var id: Int? = null,
 
     @Column
     var code: String,
