@@ -4,5 +4,5 @@ import com.luizalabs.zipcode.model.ZipCodeModel
 import org.springframework.data.repository.CrudRepository
 
 interface ZipCodeRepository : CrudRepository<ZipCodeModel, Int> {
-    fun findByCep(cep: String): ZipCodeModel?
+    fun findByCode(code: String): ZipCodeModel?
 }

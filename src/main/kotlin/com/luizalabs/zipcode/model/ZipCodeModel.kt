@@ -10,19 +10,19 @@ data class ZipCodeModel(
     var id: Int,
 
     @Column
-    var cep: String,
+    var code: String,
 
     @Column
-    var rua: String,
+    var street: String,
 
     @Column
-    var bairro: String,
+    var district: String,
 
     @Column
-    var cidade: String,
+    var city: String,
 
     @Column
-    var uf: String,
+    var state: String,
 
     @Column(name = "created_at")
     val createdAt: LocalDateTime = LocalDateTime.now()

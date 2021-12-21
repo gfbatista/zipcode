@@ -17,9 +17,9 @@ class ZipCodeController(
         return zipCodeService.getAll().map { it.toResponse() }
     }
 
-    @GetMapping("/{cep}")
-    fun getZipCode(@PathVariable cep: String): ZipCodeModel? {
-        return zipCodeService.findByCep(cep)
+    @GetMapping("/{code}")
+    fun getZipCode(@PathVariable code: String): ZipCodeModel? {
+        return zipCodeService.findByCode(code)
     }
 
 }

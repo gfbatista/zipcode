@@ -5,10 +5,10 @@ import com.luizalabs.zipcode.model.ZipCodeModel
 
 fun ZipCodeModel.toResponse(): ZipCodeResponse {
     return ZipCodeResponse(
-        cep = this.cep,
-        rua = this.rua,
-        bairro = this.bairro,
-        cidade = this.cidade,
-        uf = this.uf
+        code = this.code,
+        street = this.street,
+        district = this.district,
+        city = this.city,
+        state = this.state
     )
 }

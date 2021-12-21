@@ -15,8 +15,8 @@ class ZipCodeService(
         return zipCodeRepository.findAll().toList()
     }
 
-    fun findByCep(cep: String): ZipCodeModel? {
-        return zipCodeRepository.findByCep(cep) ?: throw NotFoundException(Errors.ERROR001.message.format(cep), Errors.ERROR001.code)
+    fun findByCode(code: String): ZipCodeModel? {
+        return zipCodeRepository.findByCode(code) ?: throw NotFoundException(Errors.ERROR001.message.format(code), Errors.ERROR001.code)
     }
 
 }
