@@ -2,6 +2,7 @@ package com.luizalabs.zipcode.controller
 
 import com.luizalabs.zipcode.controller.response.ZipCodeResponse
 import com.luizalabs.zipcode.extension.toResponse
+import com.luizalabs.zipcode.model.ZipCodeModel
 import com.luizalabs.zipcode.service.ZipCodeService
 import org.springframework.web.bind.annotation.*
 
@@ -16,9 +17,9 @@ class ZipCodeController(
         return zipCodeService.getAll().map { it.toResponse() }
     }
 
-    /*@GetMapping("/{CEP}")
-    fun getZipCode(@PathVariable id: Int): ZipCodeResponse {
-        return zipCodeService.findByCep(id).toResponse()
+    @GetMapping("/{cep}")
+    fun getZipCode(@PathVariable cep: String): ZipCodeModel? {
+        return zipCodeService.findByCep(cep)
     }
-    */
+
 }
