@@ -22,8 +22,8 @@ class ZipCodeController(
     }
 
     @GetMapping("/{code}")
-    fun getZipCode(@PathVariable code: String): ZipCodeModel? {
-        return zipCodeService.findByCode(code)
+    fun getZipCode(@PathVariable code: String): ZipCodeResponse? {
+        return zipCodeService.findByCode(code)?.toResponse()
     }
 
     @PostMapping
